@@ -1,0 +1,94 @@
+
+<html>
+    <body>
+        <h1>My assignment </h1>
+        <p id="abc">hello</p>
+       <button type="button" onclick='document.getElementById("abc").innerHTML="Pandurang Sawant"';>Click Here to know my name</button>
+       <p id="task1"></p>
+       <p id="task2"></p>
+<p id="asc"></p>
+<p id="dsc"></p>
+<p id="dsc1"></p>
+<p id="random"></p>
+<p id="at"></p>
+<p id="mob"></p>
+Number1<input type="text" name="n1" id="ch1" onkeyup="copy()"><br><br>
+Number2<input type="text" name="n2" id="ch2"/><br><br>
+        <p id="aa" style="display:none">Pandurang Arun Sawant</p>
+        <button type="button" onclick='document.getElementById("aa").style.display="block"'>Click Here to unhide my name</button><br><br>
+        <p id="dd" style="font-size: 4px">Pandurang Arun Sawant</p>
+
+        <button type="button" onclick="document.getElementById('dd').style.fontSize='7px'">Click here to increase my name size</button><br>
+        <p id="date">Your current date is</p>
+        <button type="button" onclick="document.getElementById('date').innerHTML=Date()">Click here to date</button><br>
+        <script>
+            var array=[10,44,65,33,24,65,86,3,56,88];
+            document.getElementById("task1").innerHTML="my array is"+ " "+array;
+            function myFun()
+            {
+             array.sort(function(a,b)
+            {
+               return b-a
+
+            }
+            );
+         document.getElementById("task2").innerHTML="Max no is"+" "+array[0];
+            }
+           myFun();
+    
+           function myFun1()
+           {
+             array.sort(function(a,b)
+             {
+                 return a-b
+             }
+             );
+             document.getElementById("asc").innerHTML="my array is sorted in ascending"+ " "+array;
+           }
+           myFun1();
+           var array1=[22,55,21,7,89];
+           document.getElementById("dsc").innerHTML="my array is"+ " "+array1;
+           function myFun2()
+           {
+             array1.sort(function(a,b)
+             {
+                 return b-a
+             }
+             );
+             document.getElementById("dsc1").innerHTML="my array is sorted in descending"+ " "+array1;
+           }
+        
+           myFun2();
+           function random()
+           {
+               return Math.random();
+           }
+     
+           document.getElementById("random").innerHTML="random number is:"+random();
+        var str1="pandurang.a.sawant@gmail.com";
+        var check=str1.includes("@");
+        document.getElementById("at").innerHTML="In my string @ is there:"+check;
+      var str2="8976392263";
+      function myString(num)
+      {
+          var abc=num.length;
+          if(abc==10)
+          {
+              return true;
+          }
+          else 
+          return false;
+      }
+          document.getElementById("mob").innerHTML="It contains exactly 10 digit:"+myString(str2);  
+          
+          function copy()
+           {
+        var a = document.getElementById('ch1');
+         var b = document.getElementById('ch2');
+         b.value = a.value;
+}
+            
+        </script>
+        </body>
+        </html>
+        
